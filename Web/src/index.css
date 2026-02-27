@@ -1,0 +1,57 @@
+/* src/index.css */
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'); /* Harita Stili */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Aydınlık Mod (Light Theme) */
+  --bg-main: #f8f9fa;
+  --bg-card: #ffffff;
+  --text-main: #212529;
+  --text-muted: #6c757d;
+  --accent-blue: #0d6efd; /* Güvenli Mavi */
+  --accent-red: #dc3545;  /* Acil Kırmızı */
+  --warning-bg: #ffc107;  /* Çevrimdışı Sarı/Turuncu */
+  --warning-text: #000000;
+  --border-color: #e9ecef;
+}
+
+/* Karanlık Mod (Dark Theme) Sınıfı */
+.dark {
+  --bg-main: #121212;
+  --bg-card: #1e1e1e;
+  --text-main: #f8f9fa;
+  --text-muted: #adb5bd;
+  --accent-blue: #3d8bfd;
+  --accent-red: #ea868f;
+  --warning-bg: #cc3300; /* Dark modda daha kırmızımtırak bir uyarı */
+  --warning-text: #ffffff;
+  --border-color: #343a40;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Çevrimdışı Uyarı Bandı */
+.offline-banner {
+  background-color: var(--warning-bg);
+  color: var(--warning-text);
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+  position: relative;
+}
